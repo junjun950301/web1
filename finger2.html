@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>這是我</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', serif;
+    }
+
+    header {
+      background-color: #af43cf;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .left {
+      background-color: #ff9999;
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .left h2 {
+      margin-bottom: 10px;
+    }
+
+    .left img {
+      width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(218, 211, 211, 0.3);
+    }
+
+    .right {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(255, 174, 0);
+    }
+
+    .column {
+      flex: 1;
+      padding: 15px;
+      border-left: 2px solid rgba(160, 12, 12, 0.829);
+      box-sizing: border-box;
+    }
+
+    .column:first-child {
+      border-left: none;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      background-color: #0cb0f1;
+      padding: 5px;
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+
+    .section.blue h3 {
+      background-color: #14dfe6;
+    }
+
+    p {
+      margin: 0 0 8px 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<header>我的人生</header>
+
+<div class="container">
+  <div class="left">
+    <h2>翁浚智</h2>
+    <img src="your-photo.jpg" alt="我的照片">
+  </div>
+
+  <div class="right">
+    <div class="column">
+      <div class="section blue">
+        <h3>那些曾帶給我快樂的事情</h3>
+        <p>當我站球場上那一刻
+
+        </p>
+      </div>
+      <div class="section">
+        <h3>我最喜歡的食物</h3>
+        <p>炒飯</p>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="section">
+        <h3>我的愛人</h3>
+        
+        <p>我的家人</p>
+      </div>
+      <div class="section">
+        <h3>我想說的話</h3>
+        <p>感謝有你們才能讓我在這世上好好的</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
