@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD範例</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .headline {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .desktop-menu {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .mobil-menu {
+      display: none;
+      text-align: center;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .item {
+      background-color: pink;
+      margin: 5px auto;
+      padding: 10px;
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .headline {
+        font-size: 20px;
+      }
+
+      .desktop-menu {
+        display: none;
+      }
+
+      .mobil-menu {
+        display: block;
+      }
+
+      .item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="headline">練習設計一個RWD網頁</div>
+
+  <p>這是一個回應式網頁設計文字過長的範例</p>
+
+  <div class="mobil-menu">☰</div>
+
+  <div class="desktop-menu">
+    <!-- 桌面選單內容可放這裡 -->
+  </div>
+
+  <div class="item">產品 1</div>
+  <div class="item">產品 2</div>
+  <div class="item">產品 3</div>
+  <div class="item">產品 4</div>
+
+</body>
+</html>
