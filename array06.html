@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>購物車系統</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .top-buttons {
+      margin-bottom: 20px;
+    }
+    .top-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .product {
+      margin-bottom: 30px;
+    }
+    .product img {
+      width: 200px;
+      height: auto;
+    }
+    .price {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .add-button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+    #totalDisplay {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-buttons">
+    <button id="totalButton" onclick="showTotal()">購物車總額</button>
+    <button onclick="clearCart()">清空購物車</button>
+  </div>
+
+  <div class="product">
+    <img src="泡麵一.jpg">
+    <div class="price">$100</div>
+    <button class="add-button" onclick="addToCart(100)">加入購物車</button>
+  </div>
+
+  <div class="product">
+    <img src="泡麵二.jpg">
+    <button class="add-button" onclick="addToCart(120)">加入購物車</button>
+  </div>
+
+  <div id="totalDisplay">目前總金額：$0</div>
+
+  <script>
+    let total = parseInt(localStorage.getItem('cartTotal')) || 0;
+
+    document.getElementById("totalDisplay").textContent = "目前總金額：$" + total;
+
+    function addToCart(amount) {
+        total += amount;
+        localStorage.setItem('cartTotal', total);
+        console.log("已加入商品：$" + amount + "，目前總金額為：$" + total);
+        document.getElementById("totalDisplay").textContent = "目前總金額：$" + total;
+      }
+      function showTotal() {
+        console.log("購物車總金額為：$" + total);
+        const btn = document.getElementById("totalButton");
+        btn.textContent = "總額：$" + total;
+      }      
+    function clearCart() {
+      total = 0;
+      localStorage.removeItem('cartTotal');
+      document.getElementById("totalDisplay").textContent = "目前總金額：$0";
+    }
+  </script>
+</body>
+</html>

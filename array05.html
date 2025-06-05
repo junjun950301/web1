@@ -1,0 +1,30 @@
+<body>
+    <h3>事件處理的練習</h3>
+    <span
+      class="btn"
+      onmouseover="over(this);" 
+      onmouseout="out(this);" 
+      onmousedown="down(this);" 
+      onmouseup="up(this);">
+      點我
+    </span>
+  
+    <script>
+      function down(elem){
+        elem.style.fontWeight = "bold";
+      }
+  
+      function over(elem){
+        elem.style.backgroundColor = "#ddaaaa";
+      }
+  
+      function out(elem){
+        elem.style.backgroundColor = "lightblue";
+      }
+  
+      function up(elem){
+        elem.style.fontWeight = "normal";
+      }
+    </script>
+  </body>
+  
